@@ -1,0 +1,58 @@
+############################
+# Secrets
+############################
+**/.env
+**/.env.*
+!.env.example
+!.env.sample
+
+############################
+# Proxy runtime + cert data
+############################
+proxy/data/**
+proxy/letsencrypt/**
+
+# If you want to keep folder structure but ignore contents, add placeholders:
+!proxy/data/.gitkeep
+!proxy/letsencrypt/.gitkeep
+
+############################
+# App data (if you ever add them under /opt/stacks)
+############################
+**/data/**
+**/db/**
+**/database/**
+**/datadir/**
+**/redis/**
+**/logs/**
+**/log/**
+**/tmp/**
+**/cache/**
+**/backups/**
+**/uploads/**
+
+############################
+# Docker / compose local overrides
+############################
+**/docker-compose.override.yml
+**/docker-compose.override.yaml
+**/compose.override.yml
+**/compose.override.yaml
+
+############################
+# OS / editor junk
+############################
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+############################
+# Misc
+############################
+*.pid
+*.log
+
