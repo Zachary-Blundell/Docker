@@ -39,20 +39,109 @@ proxy/letsencrypt/**
 **/compose.override.yml
 **/compose.override.yaml
 
-############################
-# OS / editor junk
-############################
+# --- General ---
 .DS_Store
 Thumbs.db
-*~
 *.swp
 *.swo
+*~
 .vscode/
 .idea/
 
-############################
-# Misc
-############################
-*.pid
-*.log
+# --- Env / secrets ---
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+*.key
+*.pem
+*.crt
+*.pub
+cli_pw
+keys.json
 
+# --- Logs ---
+*.log
+*.log.*
+logs/
+**/logs/
+**/log/
+
+# --- Databases / runtime state ---
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.mv.db
+*.sql
+*.sql.gz
+*.bak
+*.backup
+
+# --- Archives / generated backups ---
+**/backup/
+**/backups/
+**/config_backups/
+**/gravity_backups/
+**/migration_backup/
+*.gz
+*.tar
+*.tar.gz
+*.zip
+
+# --- Cache / temp ---
+cache/
+tmp/
+temp/
+**/cache/
+**/tmp/
+**/temp/
+**/heap_dumps/
+**/listsCache/
+
+# --- TLS / certificates / ACME ---
+proxy/letsencrypt/
+proxy/data/custom_ssl/
+proxy/data/keys.json
+
+# --- Nginx Proxy Manager runtime data ---
+proxy/data/access/
+proxy/data/database.sqlite
+proxy/data/logs/
+proxy/data/nginx/temp/
+proxy/data/letsencrypt-acme-challenge/
+
+# --- Pi-hole runtime data ---
+pi-hole/etc-pihole/adlists.list
+pi-hole/etc-pihole/cli_pw
+pi-hole/etc-pihole/dhcp.leases
+pi-hole/etc-pihole/gravity.db
+pi-hole/etc-pihole/gravity_old.db
+pi-hole/etc-pihole/pihole-FTL.db
+pi-hole/etc-pihole/pihole-FTL.db-shm
+pi-hole/etc-pihole/pihole-FTL.db-wal
+pi-hole/etc-pihole/tls.crt
+pi-hole/etc-pihole/tls.pem
+pi-hole/etc-pihole/tls_ca.crt
+pi-hole/etc-pihole/config_backups/
+pi-hole/etc-pihole/gravity_backups/
+pi-hole/etc-pihole/listsCache/
+pi-hole/etc-pihole/migration_backup/
+
+# --- Stirling-PDF runtime data ---
+stirling-pdf/stirling-data/tessdata/
+stirling-pdf/stirling-data/logs/
+stirling-pdf/stirling-data/configs/backup/
+stirling-pdf/stirling-data/configs/cache/
+stirling-pdf/stirling-data/configs/heap_dumps/
+stirling-pdf/stirling-data/configs/*.mv.db
+stirling-pdf/stirling-data/configs/*.sql
+stirling-pdf/stirling-data/configs/*.key
+stirling-pdf/stirling-data/configs/*.pub
+
+# --- Homepage logs ---
+homepage/config/logs/
+
+# --- Optional: ignore all service data dirs if they become populated later ---
+**/data/

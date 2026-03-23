@@ -1,0 +1,48 @@
+- Physical:
+    - PVE (Proxmox):
+        icon: proxmox.png
+        href: https://192.168.1.111:8006
+        description: Proxmox UI
+
+    - Jellynut (Jellyfin):
+        icon: jellyfin.png
+        href: http://192.168.1.102:8096
+        description: Media server
+
+- Virtual:
+    - ConvergENS Site:
+        icon: mdi-web.png
+        href: http://192.168.1.133:3000
+        description: Web app
+
+    - Directus:
+        icon: directus.png
+        href: http://192.168.1.133:8055
+        description: Headless CMS
+
+- Docker:
+    - Nextcloud:
+        icon: nextcloud.png
+        href: http://192.168.1.101:8888
+        description: Cloud files & apps
+
+    - Portainer:
+        icon: portainer.png
+        href: https://192.168.1.101:9443
+        description: Docker management
+
+    - Nginx Proxy Manager (Admin):
+        icon: nginx-proxy-manager.png
+        href: http://192.168.1.101:40081
+        description: Reverse proxy UI
+
+    - Nginx Proxy Manager (HTTP):
+        icon: mdi-web.png
+        href: http://192.168.1.101:40080
+        description: HTTP entry
+
+    - Nginx Proxy Manager (HTTPS):
+        icon: mdi-shield-lock.png
+        href: https://192.168.1.101:40443
+        description: HTTPS entry
+
